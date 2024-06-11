@@ -3,13 +3,14 @@
 read -p 'Enter your age--' age
 echo $age
 
-if [ -z "${age}" ]; then
-  echo input is missing
-  exit
-fi
-if [ "${age}" -lt 18 ]; then
+#if [ -z "${age}" ]; then
+ # echo input is missing
+  #exit
+#fi
+
+if [ ! -z "${age}"  -a "${age}" -lt 18 ]; then
   echo you are minor
-  elif [ "${age}" -gt 60 ]; then
+  elif [ ! -z "${age}" -a "${age}" -gt 60 ]; then
     echo you are senior citizen
   else
     echo you are major
